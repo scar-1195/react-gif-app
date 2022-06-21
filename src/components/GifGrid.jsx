@@ -3,7 +3,7 @@ import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 
 export const GifGrid = ({ category }) => {
-  const [images, isLoading] = useFetchGifs(category);
+  const {images, isLoading} = useFetchGifs(category);
 
   return (
     <>
@@ -24,5 +24,5 @@ export const GifGrid = ({ category }) => {
 }
 
 GifGrid.propTypes = {
-  category: PropTypes.string,
+  category: PropTypes.string.isRequired,
 };
